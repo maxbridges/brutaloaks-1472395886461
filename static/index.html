@@ -1,20 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Python Starter Application</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<link rel="stylesheet" href="stylesheets/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Screen Background Video</title>
+  <meta name="description" content="Full screen background video demo">
+  <meta name="author" description="Call Me Nick">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oxygen:400,300,700">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<table>
-		<tr>
-			<td style='width: 30%;'><img class = 'newappIcon' src='images/newapp-icon.png'>
-			</td>
-			<td>
-				<h1 id = "message">Hello World</h1>
-				<p class='description'></p> Thanks for creating a <span class="blue">Python Starter Application</span>. To get started see the Start Coding guide under your app in your dashboard.
-			</td>
-		</tr>
-	</table>
+  
+<div class="content">
+  <h1 class="content__heading">Welcome To My Product</h1>
+  <p class="content__teaser">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit qui voluptatum enim est deserunt assumenda, aspernatur quam aperiam!</p>
+  <a href="#" class="content__cta">Buy It Now!</a>
+</div><!-- /content -->
+
+<video id="my-video" class="video" muted loop>
+  <source src="media/demo.mp4" type="video/mp4">
+  <source src="media/demo.ogv" type="video/ogg">
+  <source src="media/demo.webm" type="video/webm">
+</video><!-- /video -->
+
+<script>
+(function() {
+  /**
+   * Video element
+   * @type {HTMLElement}
+   */
+  var video = document.getElementById("my-video");
+
+  /**
+   * Check if video can play, and play it
+   */
+  video.addEventListener( "canplay", function() {
+    video.play();
+  });
+})();
+</script>
+
 </body>
 </html>
